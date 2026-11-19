@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike Finder | Throttle &amp; Line</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">THROTTLE <span>&amp;</span> LINE</a>
+      <nav class="site-nav">
+        <a href="index.html">Journal</a>
+        <a href="catalog.html" class="active">Bike Finder</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <p class="eyebrow">PUBLIC MOTORCYCLE DATABASE</p>
+      <h1>Scroll, Explore &amp; Discuss Motorcycles</h1>
+      <p class="hero-sub">Live manufacturer and model records fetched from the NHTSA vPIC Public Vehicle API. Select any motorcycle to inspect and post public comments.</p>
+    </div>
+  </section>
+
+  <main class="container catalog-layout">
+    <section class="catalog-browser">
+      <div class="card filter-bar">
+        <div class="filter-group">
+          <label for="make-search">Filter Manufacturers</label>
+          <input type="text" id="make-search" placeholder="Search Honda, Yamaha, Kawasaki, Ducati...">
+        </div>
+        <div class="filter-group">
+          <label for="model-year">Model Year</label>
+          <select id="model-year">
+            <option value="2026">2026</option>
+            <option value="2025">2025</option>
+            <option value="2024" selected>2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2020">2020</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="split-explorer">
+        <div class="card scroll-panel">
+          <div class="panel-header">
+            <h3>1. Manufacturers</h3>
+            <span id="make-count" class="badge">Loading...</span>
+          </div>
+          <div id="makes-scroll-list" class="scroll-list">
+            <p class="muted">Connecting to NHTSA Motorcycle API...</p>
+          </div>
+        </div>
+
+        <div class="card scroll-panel">
+          <div class="panel-header">
+            <h3 id="models-heading">2. Available Models</h3>
+            <span id="model-count" class="badge">Select a make</span>
+          </div>
+          <div id="models-scroll-list" class="scroll-list">
+            <p class="muted">Scroll and click a manufacturer on the left to load its motorcycles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="bike-detail-panel">
+      <div class="card sticky-detail">
+        <p class="eyebrow">SELECTED MOTORCYCLE</p>
+        <h2 id="selected-bike-title">Choose a Bike to Comment</h2>
+        <p id="selected-bike-meta" class="muted">Click any motorcycle model from the list to view its API record and open its comment thread.</p>
+        <div id="bike-specs-box" class="specs-box hidden"></div>
+
+        <hr class="divider">
+
+        <h3>Rider Comments on This Bike</h3>
+        <p class="muted small-text">Your comments are saved publicly via GitHub Issues when deployed on GitHub Pages.</p>
+        <div id="bike-comments-mount"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Throttle &amp; Line &mdash; Crafted by <strong>Isiah Roddick Malixi</strong> (2nd Year ACT)</p>
+      <p class="muted">Data Source: U.S. DOT NHTSA vPIC Public API</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

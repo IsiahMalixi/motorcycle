@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throttle &amp; Line | Motorcycle Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">THROTTLE <span>&amp;</span> LINE</a>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Journal</a>
+        <a href="catalog.html">Bike Finder</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">RIDER LOG &bull; TWO-WHEEL CULTURE</p>
+      <h1>Notes from the Open Road &amp; Garage</h1>
+      <p class="hero-sub">Stories on motorcycle engineering, weekend rides, and community discussions curated by Isiah Roddick Malixi.</p>
+      <div class="hero-actions">
+        <a href="#new-post" class="btn btn-primary">Write a Post</a>
+        <a href="catalog.html" class="btn btn-outline">Browse Motorcycle API</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container main-grid">
+    <section class="feed-section">
+      <div class="section-head">
+        <h2>Latest Entries</h2>
+        <span class="badge" id="post-count">3 Articles</span>
+      </div>
+
+      <div id="posts-container" class="posts-list"></div>
+
+      <div class="card composer-card" id="new-post">
+        <h3>Publish a New Journal Entry</h3>
+        <p class="muted">Share a ride report, maintenance tip, or bike review.</p>
+        <form id="post-form" class="stack-form">
+          <div class="form-row">
+            <label for="post-author">Author Name</label>
+            <input type="text" id="post-author" value="Isiah Roddick Malixi" required>
+          </div>
+          <div class="form-row">
+            <label for="post-category">Category</label>
+            <select id="post-category">
+              <option value="Ride Report">Ride Report</option>
+              <option value="Machine Review">Machine Review</option>
+              <option value="Garage &amp; Tech">Garage &amp; Tech</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="post-title">Headline</label>
+            <input type="text" id="post-title" placeholder="e.g., Early Morning Twisties on a 400cc Twin" required>
+          </div>
+          <div class="form-row">
+            <label for="post-body">Story</label>
+            <textarea id="post-body" rows="4" placeholder="Write your thoughts on the ride or machine..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Publish Entry</button>
+        </form>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="card author-card">
+        <p class="eyebrow">EDITOR &amp; DEVELOPER</p>
+        <h3>Isiah Roddick Malixi</h3>
+        <p class="role-tag">2nd Year &bull; Associate in Computer Technology (ACT)</p>
+        <p class="muted">Building clean web experiences and documenting the mechanics and freedom of motorcycles.</p>
+        <a href="about.html" class="text-link">Read full profile &rarr;</a>
+      </div>
+
+      <div class="card discussion-card">
+        <h3>Community Garage Board</h3>
+        <p class="muted">Leave a public note below. When hosted on GitHub, comments sync directly via GitHub Issues so everyone can read and reply.</p>
+        <div id="github-comments-container" data-topic="journal-general"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Throttle &amp; Line &mdash; Crafted by <strong>Isiah Roddick Malixi</strong> (2nd Year ACT)</p>
+      <p class="muted">Powered by NHTSA Public Motorcycle Data &amp; GitHub Discussions</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
